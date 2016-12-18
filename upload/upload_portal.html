@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Yoink!</title>
+		<style>
+			label,input {
+				font-size: 24px;
+				font-family: Helvetica;
+			}
+			td {
+				padding: 10px;
+				margin: 10px;
+				background-color: #ffffdd;
+				/* background-color: #eeffee; */
+			}
+			body {
+				background-color: #002222;
+				/* background-color: #222200; */
+			}
+			h1, h2 {
+				font-family: Helvetica;
+				margin: 5px 0px;
+				padding: 0;
+			}
+			h1 {
+				font-size: 48px;
+				color: #aaaaff;
+			}
+			h2 {
+				font-size: 24px;
+				color: #ffddaa;
+			}
+			input {
+				border: 3px solid #cccccc;
+				font-family: Georgia;
+			}
+			#comments {
+				width: 600px;
+				//font-size: 15px;
+			}
+			
+		</style>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script>
+			var d = new Date();
+			function createFilename() {
+				title_input = document.getElementById('title');
+				title_input.value = "untitled-" + d.getTime();
+			}
+		</script>
+	</head>
+
+	<body onload="createFilename()">
+		<h1>cool, I want to look at that later</h1>
+		<form action="uploading.php" method="post" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td> <label for="add">Photo </label> </td>
+					<td> <input type="file" accept="image/*" capture="camera" id="cameraInput" value="Browse" name="add"> </td>
+				</tr>
+				<tr>
+					<td> <label for="title">Title</label> </td>
+					<td> <input id="title" type="text" value="Untitled" name="title"></input> </td>
+				</tr>
+				<tr>
+					<td><label for="comments">Comments </label></td>
+					<td><input id="comments" type="textarea" rows="4" value="I thought this was neat." name="comments" cols="50"></input></td>
+				<tr>
+					<td><label for="submit">BAM!</label></td>
+					<td> <input type="submit" value="Upload image" name="submit">		</td>
+				</tr>
+			</table>
+		</form>	
+	
+	</body>
+</html>
+
