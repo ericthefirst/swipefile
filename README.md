@@ -1,5 +1,5 @@
 # swipefile
-Inspired by *Steal Like an Artist*, a web-based swipe file app to stash away ideas that inspires you.  
+Inspired by *Steal Like an Artist*, a web-based swipe file app to stash away ideas that inspire you.  
 Be sure to give credit to original creators.
 
 ![screenshot](img/sw_ss_50pct.png)
